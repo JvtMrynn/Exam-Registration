@@ -1,0 +1,125 @@
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+  margin: 2% auto;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fc;
+  box-shadow: -2px -2px 9px rgba(6,14,77,0.2), 5px 5px 9px rgba(6,14,77,0.2);
+}
+
+table thead {
+  background-color: #060e4d;
+  color: white;
+  text-align: left;
+}
+
+table thead th {
+  padding: 10px;
+  font-family: 'Acme', sans-serif;
+  font-size: 20px;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #d8daf0;
+}
+
+table tbody tr:hover {
+  background-color: rgba(6,14,77,0.1);
+  cursor: pointer;
+}
+
+table tbody td {
+  padding: 10px;
+  border: 1px solid #060e4d;
+  text-align: left;
+}
+
+table a {
+  color: #060e4d;
+  text-decoration: none;
+}
+
+table a:hover {
+  text-decoration: underline;
+  color: #030627;
+}
+
+th, td {
+  word-wrap: break-word;
+  white-space: nowrap;
+}
+
+
+/* Textarea Styling */
+textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  resize: vertical; /* Allows vertical resizing only */
+}
+
+
+/* Action Button Styles */
+button {
+  font-family: 'Acme', sans-serif;
+  font-size: 18px;
+  color: white;
+  background-color: #060e4d;
+  border: 2px solid #060e4d;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #030627;
+  box-shadow: 3px 3px 6px rgba(6,14,77,0.5);
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Responsive Table */
+@media screen and (max-width: 768px) {
+  table {
+    font-size: 16px;
+  }
+
+  table thead {
+    display: none;
+  }
+
+  table tbody tr {
+    display: block;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #060e4d;
+  }
+
+  table tbody td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+  }
+
+  table tbody td:before {
+    content: attr(data-label);
+    flex: 1;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  button {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+  }
+}
+
